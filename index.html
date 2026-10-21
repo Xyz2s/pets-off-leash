@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pets Off Leash – Grooming, vet care and boarding</title>
+<meta name="description" content="Pets Off Leash offers grooming, veterinary care, boarding and a small shop for dogs and cats. Book a visit online.">
+<meta name="theme-color" content="#10283A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23FFC43D'/%3E%3Ccircle cx='50' cy='64' r='20' fill='%2310283A'/%3E%3Ccircle cx='24' cy='42' r='9' fill='%2310283A'/%3E%3Ccircle cx='42' cy='26' r='9' fill='%2310283A'/%3E%3Ccircle cx='60' cy='26' r='9' fill='%2310283A'/%3E%3Ccircle cx='77' cy='42' r='9' fill='%2310283A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="bar" id="top">
+  <a class="brand" href="#top" aria-label="Pets Off Leash home">Pets Off Leash</a>
+  <nav id="nav" aria-label="Main">
+    <a href="#services">Services</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
+    <a class="btn small" href="#book">Book a visit</a>
+  </nav>
+  <button class="cart-btn" id="cartOpen" aria-label="Open cart">Cart <b id="cartCount">0</b></button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="status" id="status">Checking hours…</p>
+      <h1>Pets, off leash.</h1>
+      <svg class="leash" viewBox="0 0 600 120" aria-hidden="true"><circle cx="14" cy="88" r="9"/><path d="M22 88C130 6 210 134 330 62S520 14 588 70"/></svg>
+      <p class="lead">Grooming, vet care and boarding for dogs and cats who would rather be running. Book a visit in under a minute.</p>
+      <div class="row"><a class="btn" href="#book">Book a visit</a><a class="btn ghost" href="#services">See services</a></div>
+    </div>
+    <figure class="arch">
+      <img src="https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Happy dog outdoors with its owner">
+      <figcaption class="sticker">Open<br>7 days</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="green" id="services">
+  <div class="wrap">
+    <h2>Care that keeps up with them</h2>
+    <div class="services">
+      <article class="card">
+        <img src="https://images.pexels.com/photos/7516363/pexels-photo-7516363.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Dog being groomed" loading="lazy">
+        <div><h3>Grooming</h3><p>Full-service grooming with pet-safe, hypoallergenic products.</p>
+        <ul class="chips"><li>Bath and blow dry</li><li>Haircut</li><li>Nail trim</li><li>Ear cleaning</li></ul>
+        <a class="btn small" href="#book" data-service="Grooming">Book grooming</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.pexels.com/photos/7516364/pexels-photo-7516364.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Vet examining a pet" loading="lazy">
+        <div><h3>Vet care</h3><p>Check-ups, vaccinations and emergency care from certified vets.</p>
+        <ul class="chips"><li>Check-ups</li><li>Vaccinations</li><li>Dental care</li><li>Emergencies</li></ul>
+        <a class="btn small" href="#book" data-service="Vet care">Book a check-up</a></div>
+      </article>
+      <article class="card">
+        <img src="https://images.pexels.com/photos/1643456/pexels-photo-1643456.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Dog resting at boarding" loading="lazy">
+        <div><h3>Boarding</h3><p>Roomy suites, daily exercise and someone always on watch.</p>
+        <ul class="chips"><li>Spacious suites</li><li>Daily exercise</li><li>24/7 supervision</li><li>Special diets</li></ul>
+        <a class="btn small" href="#book" data-service="Boarding">Book boarding</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <h2>Things they will actually use</h2>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+
+<section class="sun" id="book">
+  <div class="wrap book-grid">
+    <div>
+      <h2>Book a visit</h2>
+      <p class="lead">Pick a service, a day and a time. We confirm by phone or email shortly after.</p>
+      <ul class="ticks"><li>Experienced, certified staff</li><li>Flexible scheduling</li><li>Emergency slots on request</li></ul>
+    </div>
+    <form class="panel" id="bookForm">
+      <fieldset><legend>Service</legend>
+        <label class="pick"><input type="radio" name="service" value="Grooming" required><span>Grooming</span></label>
+        <label class="pick"><input type="radio" name="service" value="Vet care"><span>Vet care</span></label>
+        <label class="pick"><input type="radio" name="service" value="Boarding"><span>Boarding</span></label>
+      </fieldset>
+      <div class="two">
+        <label>Your name<input name="owner" required autocomplete="name"></label>
+        <label>Pet’s name<input name="pet" required></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Date<input name="date" id="date" type="date" required></label>
+      </div>
+      <label>Time<select name="time" id="time" required><option value="">Choose a date first</option></select></label>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Allergies, nerves, favourite treat"></textarea></label>
+      <button class="btn" type="submit">Confirm booking</button>
+    </form>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <img class="tilt" src="https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Our team with pets" loading="lazy">
+    <div>
+      <h2>Run first, rules second</h2>
+      <p>Since 2010 we have looked after pets in our community with one idea: a calm, clean place where animals can be themselves. Our certified team trains every year, and our facility is checked daily for safety and cleanliness.</p>
+      <dl class="stats"><div><dt>Happy pets</dt><dd>5,000+</dd></div><div><dt>Years caring</dt><dd>13</dd></div><div><dt>Expert staff</dt><dd>15+</dd></div></dl>
+    </div>
+  </div>
+  <div class="wrap quotes">
+    <blockquote><p>The best pet care service I have used. My dog loves coming here.</p><footer><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=120" alt="" loading="lazy">Sarah Johnson, dog owner</footer></blockquote>
+    <blockquote><p>Professional and so gentle with my cats. Highly recommended.</p><footer><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=120" alt="" loading="lazy">Michael Brown, cat owner</footer></blockquote>
+  </div>
+</section>
+
+<section class="ink" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Say hello</h2>
+      <address>
+        <p><b>Visit</b><br>123 Pet Street, New York, NY 10001</p>
+        <p><b>Call</b><br><a href="tel:+15174686223">(517) 468-6223</a></p>
+        <p><b>Email</b><br><a href="mailto:info@petsoffleash.com">info@petsoffleash.com</a></p>
+      </address>
+      <table class="hours"><tbody>
+        <tr data-days="1,2,3,4,5"><th>Mon to Fri</th><td>8 AM to 8 PM</td></tr>
+        <tr data-days="0,6"><th>Sat and Sun</th><td>9 AM to 6 PM</td></tr>
+      </tbody></table>
+    </div>
+    <form class="panel" id="contactForm">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Message<textarea name="message" rows="5" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>© <span id="year"></span> Pets Off Leash. petsoffleash.com</span><a href="#top">Back to top</a></div></footer>
+
+<div class="veil" id="veil" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-head"><h3>Your cart</h3><button id="cartClose" aria-label="Close cart">Close</button></div>
+  <ul id="cartList"></ul>
+  <div class="drawer-foot"><p>Total <b id="cartTotal">$0.00</b></p><button class="btn" id="checkout">Place order request</button></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
